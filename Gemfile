@@ -62,7 +62,7 @@ gem 'multi_json', "~>1.7.3" # 1.8.0 caused "invalid byte sequence in UTF-8" at h
 gem 'web_translate_it'
 gem 'postmark-rails' # could be removed as not currently used
 gem 'rails-i18n'
-gem 'devise', "~>2.2.4"  #3.0rc requires bit bigger changes
+gem 'devise', "~>3.0.0"
 gem "devise-encryptable"
 gem "omniauth-facebook", "~> 2.0.1"
 gem 'spreadsheet'
