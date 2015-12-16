@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'rails', '3.2.21'
+gem 'rails', '4.0.13'
 
 # To use debugger
 #gem 'ruby-debug'
@@ -10,12 +10,12 @@ gem 'rails', '3.2.21'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'coffee-rails', "~> 3.2.2"
+  gem 'coffee-rails', "~> 4.0.1"
   gem 'uglifier'
   gem 'asset_sync', '~> 1.0.0'
 end
 
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails', '~> 1.1'
 
 # Requiring 'compass' gem directly is not normally needed,
@@ -70,7 +70,13 @@ gem 'xpath'
 gem 'dynamic_form'
 gem "truncate_html"
 gem 'money-rails'
-gem 'mercury-rails'
+
+# The latest release (0.9.0) is not Rails 4 compatible
+gem 'mercury-rails',
+  git: 'git://github.com/jejacks0n/mercury.git',
+  branch: 'master',
+  ref: '1cc637b0bccea19085f824d2881c6513ed5ee8ae'
+
 gem 'fb-channel-file'
 gem 'country_select', '~> 1.3.1'
 gem 'braintree'
@@ -128,7 +134,6 @@ group :test do
   gem 'ruby-prof'
   gem "pickle"
   gem 'email_spec'
-  gem 'action_mailer_cache_delivery'
   gem "parallel_tests", :group => :development
   gem 'timecop'
   gem 'rack-test'
@@ -143,5 +148,3 @@ group :development, :test do
   gem 'pry-nav'
   gem 'pry-stack_explorer'
 end
-
-gem 'strong_parameters'
