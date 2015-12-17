@@ -143,6 +143,7 @@ group :test do
   gem 'database_cleaner', '~> 1.1'
   gem 'connection_pool'
   gem 'coveralls', require: false
+  gem 'rails-observers', '~> 0.1.2'
 end
 
 group :development, :test do
