@@ -23,6 +23,14 @@
 
 class Location < ActiveRecord::Base
 
+  attr_accessible(
+    :address,
+    :google_address,
+    :latitude,
+    :longitude,
+    :location_type
+  )
+
   belongs_to :person
   belongs_to :listing
   belongs_to :community
