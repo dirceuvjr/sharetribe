@@ -38,8 +38,7 @@ module StylesheetCompiler
 
         env.context_class.instance_eval do
           # Include these helpers to allow SASS files to use image-url etc. helpers
-          include Sprockets::Helpers::RailsHelper
-          include Sprockets::Helpers::IsolatedHelper
+          include Sprockets::Rails::Helper
 
           def sass_config
             ActiveSupport::OrderedOptions.new.tap do |s|
